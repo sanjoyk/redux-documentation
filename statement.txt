@@ -1,0 +1,4 @@
+The state mutation in your app needs to be describes as a pure function that takes previous state and the action being dispatch and returns next state.
+
+Inside any redux application there is one particular function that takes the state of the whole application and the action that is dispatched and returns the new state.
+Even in the large application there is still just a single function that manages how the next state is calculated based on the previous state and the action is dispatched. 
