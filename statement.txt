@@ -1,0 +1,7 @@
+*Changes are made with pure functions
+* To specify how the state tree is transformed by acitons, you write pure reducers.
+
+Pure Function : a. whose returned value depends on only the arguments
+				b. dont have any obserable side effect such as network or database call
+				c. for same set of argument it will returned same output ie they are predictable
+				d. don't modify the value passed to them ie dont chnaged arguments
