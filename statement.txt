@@ -1,0 +1,4 @@
+State is read only
+The only way to change the state is to emit an action, an object describing what happened. 
+
+An action is a plane javascript object describing the minimal way what changed in the application, whether it is initiated by network replaced or by user interaction.
