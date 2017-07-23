@@ -65,6 +65,11 @@ store.dispatch({
     id: 1
 });
 console.log(store.getState());
+store.dispatch({
+    type: 'SHOW_VISIBILITY_FILTER',
+    filter: 'SHOW_ACTIVE'
+});
+console.log(store.getState());
 
 console.log('all test passed');
 registerServiceWorker();
