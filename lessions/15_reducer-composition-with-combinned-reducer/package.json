@@ -1,11 +1,10 @@
 {
-  "name": "14_reducer-composition-with-object",
+  "name": "15_reducer-composition-with-combinned-reducer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "redux": "^3.7.2"
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.10"
