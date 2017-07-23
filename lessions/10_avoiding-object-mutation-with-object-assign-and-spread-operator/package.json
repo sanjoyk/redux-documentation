@@ -1,0 +1,20 @@
+{
+  "name": "10_avoiding-object-mutation-with-object-assign-and-spread-operator",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "deep-freeze": "0.0.1",
+    "expect": "^1.20.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.10"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
