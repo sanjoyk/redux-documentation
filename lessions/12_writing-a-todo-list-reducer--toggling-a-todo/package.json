@@ -1,5 +1,5 @@
 {
-  "name": "11_writing-a-todo-list-reducer-adding-a-todo",
+  "name": "12_writing-a-todo-list-reducer--toggling-a-todo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
