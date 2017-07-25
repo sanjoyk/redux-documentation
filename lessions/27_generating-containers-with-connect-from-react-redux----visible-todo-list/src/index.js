@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers } from 'redux';
-import { Provider } from 'react-redux';
+import { Provider, connect } from 'react-redux';
 
 const todo = (state = {}, action) => {
     switch (action.type) {
@@ -154,35 +154,42 @@ const TodoList = ({ todos, onTodoClick }) => {
         </ul>
     );
 };
-
-class VisibleTodoList extends Component {
-    componentDidMount() {
-        const { store } = this.context;
-        this.unsubscribe = store.subscribe(() => {
-            this.forceUpdate();
-        });
-    }
-    componentWillUnmount() {
-        this.unsubscribe();
-    }
-    render() {
-        const { store } = this.context;
-        const { todos, visibilityFilter } = store.getState();
-        return (
-            <TodoList
-                todos={getVisibilityTodos(todos, visibilityFilter)}
-                onTodoClick={id =>
-                    store.dispatch({
-                        type: 'TOGGLE_TODO',
-                        id
-                    })}
-            />
-        );
-    }
-}
-VisibleTodoList.contextTypes = {
-    store: React.PropTypes.object
+//visibilityFilter
+const mapStateToProps = state => {
+    return {
+        todos: getVisibilityTodos(state.todos, state.visibilityFilter)
+    };
 };
+const mapDispatchToProps = dispatch => {
+    return {
+        onTodoClick: id => {
+            dispatch({
+                type: 'TOGGLE_TODO',
+                id
+            });
+        }
+    };
+};
+const VisibleTodoList = connect(mapStateToProps, mapDispatchToProps)(TodoList);
+// class  extends Component {
+//     componentDidMount() {
+//         const { store } = this.context;
+//         this.unsubscribe = store.subscribe(() => {
+//             this.forceUpdate();
+//         });
+//     }
+//     componentWillUnmount() {
+//         this.unsubscribe();
+//     }
+//     render() {
+//         const { store } = this.context;
+//         const { todos, visibilityFilter } = store.getState();
+//         return <TodoList />;
+//     }
+// }
+// VisibleTodoList.contextTypes = {
+//     store: React.PropTypes.object
+// };
 const AddTodo = (props, { store }) => {
     let input;
     return (

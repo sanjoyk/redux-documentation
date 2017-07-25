@@ -1,5 +1,5 @@
 {
-  "name": "26_passing-the-store-down-with-provider-from-react-redux",
+  "name": "30_extracting-action-creator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

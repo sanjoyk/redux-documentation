@@ -1,5 +1,5 @@
 {
-  "name": "26_passing-the-store-down-with-provider-from-react-redux",
+  "name": "27_generating-containers-with-connect-from-react-redux----visible-todo-list",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
