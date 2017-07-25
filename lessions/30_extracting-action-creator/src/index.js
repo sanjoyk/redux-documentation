@@ -201,6 +201,7 @@ let AddTodo = ({ dispatch }) => {
 //     }
 // )(AddTodo);
 AddTodo = connect()(AddTodo);
+
 let nextTodoId = 0;
 const TodoApp = () => {
     return (
